@@ -26,14 +26,14 @@ h1 {
 }
 
 #malla::-webkit-scrollbar-thumb {
-  background-color: #f3a6c8;
+  background-color: #f4d8e4;
   border-radius: 10px;
 }
 
 /* ===== SEMESTRE (COLUMNA) ===== */
 .semestre {
   min-width: 260px;
-  background-color: #ffe3ee;
+  background-color: #fdebf3;
   border-radius: 18px;
   padding: 15px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
@@ -64,7 +64,7 @@ h1 {
 
 /* ===== ESTADOS ===== */
 .no-aprobado {
-  background-color: #f8c1d9;
+  background-color: #f4d8e4; /* ROSADO */
   color: #5a1f36;
 }
 
@@ -73,8 +73,8 @@ h1 {
 }
 
 .aprobado {
-  background-color: #9ae6b4;
-  color: #14532d;
+  background-color: #75bab7; /* VERDE */
+  color: #0f3f3d;
   text-decoration: line-through;
 }
 
