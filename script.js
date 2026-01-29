@@ -162,5 +162,22 @@ function render() {
     contenedor.appendChild(semDiv);
   });
 }
+function actualizarProgreso() {
+  const totalRamos = malla.reduce(
+    (total, sem) => total + sem.ramos.length,
+    0
+  );
 
-render();
+  const porcentaje = Math.round((aprobados.length / totalRamos) * 100);
+
+  document.getElementById("progreso-texto").textContent =
+    `${porcentaje}% aprobado`;
+
+  document.getElementById("progreso-relleno").style.width =
+    `${porcentaje}%`;
+}
+function render() {
+  contenedor.innerHTML = "";
+  ...
+  actualizarProgreso();
+}
