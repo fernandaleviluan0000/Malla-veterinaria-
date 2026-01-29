@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff6fb;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #d63384;
+}
+
+.semestre {
+  margin-bottom: 25px;
+}
+
+.semestre h2 {
+  color: #a61e4d;
+}
+
+.ramos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.ramo {
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Estados */
+.no-aprobado {
+  background-color: #f8c1d9;
+}
+
+.aprobado {
+  background-color: #9ae6b4;
+  text-decoration: line-through;
+}
+
+.bloqueado {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
