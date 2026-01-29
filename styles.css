@@ -1,14 +1,14 @@
 /* ===== GENERAL ===== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #fff2f7;
+  background-color: #f3faf8;
   margin: 0;
   padding: 20px;
 }
 
 h1 {
   text-align: center;
-  color: #d63384;
+  color: #3f7f7a;
   margin-bottom: 30px;
 }
 
@@ -20,28 +20,28 @@ h1 {
   padding-bottom: 20px;
 }
 
-/* Scroll horizontal bonito */
+/* Scroll horizontal suave */
 #malla::-webkit-scrollbar {
   height: 10px;
 }
 
 #malla::-webkit-scrollbar-thumb {
-  background-color: #f4d8e4;
+  background-color: #b7ded8;
   border-radius: 10px;
 }
 
 /* ===== SEMESTRE (COLUMNA) ===== */
 .semestre {
   min-width: 260px;
-  background-color: #fdebf3;
+  background-color: #e6f4f1;
   border-radius: 18px;
   padding: 15px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
 }
 
 .semestre h2 {
   text-align: center;
-  color: #b03060;
+  color: #3f7f7a;
   margin-bottom: 15px;
 }
 
@@ -63,24 +63,28 @@ h1 {
 }
 
 /* ===== ESTADOS ===== */
+
+/* No aprobado */
 .no-aprobado {
-  background-color: #f4d8e4; /* ROSADO */
-  color: #5a1f36;
+  background-color: #dff1ed;
+  color: #355f5b;
 }
 
 .no-aprobado:hover {
   transform: scale(1.03);
 }
 
+/* Aprobado */
 .aprobado {
-  background-color: #75bab7; /* VERDE */
+  background-color: #75bab7;
   color: #0f3f3d;
   text-decoration: line-through;
 }
 
+/* Bloqueado */
 .bloqueado {
-  background-color: #d6d6d6;
-  color: #6b6b6b;
+  background-color: #cfdedb;
+  color: #6b7f7c;
   cursor: not-allowed;
-  opacity: 0.7;
+  opacity: 0.75;
 }
