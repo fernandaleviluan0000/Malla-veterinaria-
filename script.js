@@ -114,6 +114,21 @@ const malla = [
 const contenedor = document.getElementById("malla");
 let aprobados = JSON.parse(localStorage.getItem("aprobados")) || [];
 
+function actualizarProgreso() {
+  const totalRamos = malla.reduce(
+    (total, sem) => total + sem.ramos.length,
+    0
+  );
+
+  const porcentaje = Math.round((aprobados.length / totalRamos) * 100);
+
+  document.getElementById("progreso-texto").textContent =
+    `${porcentaje}% aprobado`;
+
+  document.getElementById("progreso-relleno").style.width =
+    `${porcentaje}%`;
+}
+
 function render() {
   contenedor.innerHTML = "";
 
@@ -161,23 +176,8 @@ function render() {
     semDiv.appendChild(ramosDiv);
     contenedor.appendChild(semDiv);
   });
-}
-function actualizarProgreso() {
-  const totalRamos = malla.reduce(
-    (total, sem) => total + sem.ramos.length,
-    0
-  );
 
-  const porcentaje = Math.round((aprobados.length / totalRamos) * 100);
-
-  document.getElementById("progreso-texto").textContent =
-    `${porcentaje}% aprobado`;
-
-  document.getElementById("progreso-relleno").style.width =
-    `${porcentaje}%`;
-}
-function render() {
-  contenedor.innerHTML = "";
-  ...
   actualizarProgreso();
 }
+
+render();
