@@ -1,49 +1,82 @@
+/* ===== ESTILO GENERAL ===== */
 body {
-  font-family: Arial, sans-serif;
-  background: #fff6fb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fff2f7;
+  margin: 0;
   padding: 20px;
 }
 
 h1 {
   text-align: center;
   color: #d63384;
+  margin-bottom: 30px;
 }
 
+/* ===== SEMESTRES ===== */
 .semestre {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .semestre h2 {
-  color: #a61e4d;
+  color: #b03060;
+  margin-bottom: 12px;
 }
 
+/* ===== CONTENEDOR DE RAMOS (HORIZONTAL) ===== */
 .ramos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 12px;
 }
 
-.ramo {
-  padding: 12px;
+/* Scroll bonito */
+.ramos::-webkit-scrollbar {
+  height: 8px;
+}
+
+.ramos::-webkit-scrollbar-thumb {
+  background-color: #f3a6c8;
   border-radius: 10px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
-  transition: 0.3s;
 }
 
-/* Estados */
+.ramos::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* ===== RAMOS ===== */
+.ramo {
+  min-width: 220px;
+  padding: 14px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ESTADOS ===== */
 .no-aprobado {
   background-color: #f8c1d9;
+  color: #5a1f36;
+}
+
+.no-aprobado:hover {
+  transform: scale(1.04);
 }
 
 .aprobado {
   background-color: #9ae6b4;
+  color: #14532d;
   text-decoration: line-through;
 }
 
 .bloqueado {
-  background-color: #d3d3d3;
+  background-color: #d6d6d6;
+  color: #6b6b6b;
   cursor: not-allowed;
-  opacity: 0.6;
+  opacity: 0.7;
+  box-shadow: none;
 }
