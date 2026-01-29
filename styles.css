@@ -1,4 +1,4 @@
-/* ===== ESTILO GENERAL ===== */
+/* ===== GENERAL ===== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #fff2f7;
@@ -12,49 +12,54 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* ===== SEMESTRES ===== */
-.semestre {
-  margin-bottom: 35px;
-}
-
-.semestre h2 {
-  color: #b03060;
-  margin-bottom: 12px;
-}
-
-/* ===== CONTENEDOR DE RAMOS (HORIZONTAL) ===== */
-.ramos {
+/* ===== CONTENEDOR GENERAL DE LA MALLA ===== */
+#malla {
   display: flex;
-  gap: 14px;
+  gap: 25px;
   overflow-x: auto;
-  padding-bottom: 12px;
+  padding-bottom: 20px;
 }
 
 /* Scroll bonito */
-.ramos::-webkit-scrollbar {
-  height: 8px;
+#malla::-webkit-scrollbar {
+  height: 10px;
 }
 
-.ramos::-webkit-scrollbar-thumb {
+#malla::-webkit-scrollbar-thumb {
   background-color: #f3a6c8;
   border-radius: 10px;
 }
 
-.ramos::-webkit-scrollbar-track {
-  background-color: transparent;
+/* ===== SEMESTRE (COLUMNA) ===== */
+.semestre {
+  min-width: 260px;
+  background-color: #ffe3ee;
+  border-radius: 18px;
+  padding: 15px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== RAMOS ===== */
+.semestre h2 {
+  text-align: center;
+  color: #b03060;
+  margin-bottom: 15px;
+}
+
+/* ===== RAMOS EN VERTICAL ===== */
+.ramos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== RAMO ===== */
 .ramo {
-  min-width: 220px;
-  padding: 14px;
-  border-radius: 14px;
+  padding: 12px;
+  border-radius: 12px;
   text-align: center;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease;
-  flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
 }
 
 /* ===== ESTADOS ===== */
@@ -64,7 +69,7 @@ h1 {
 }
 
 .no-aprobado:hover {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .aprobado {
@@ -78,5 +83,4 @@ h1 {
   color: #6b6b6b;
   cursor: not-allowed;
   opacity: 0.7;
-  box-shadow: none;
 }
